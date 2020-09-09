@@ -20,9 +20,10 @@ def do_connect():
     if not sta_if.isconnected():
         print('connecting to network...')
         sta_if.active(True)
-        sta_if.connect('<essid>', '<password>')
+        sta_if.connect("<eesid>", "<password>")
         while not sta_if.isconnected():
-            pass
+            print(".",end="")
+        print()
     print('network config:', sta_if.ifconfig())
 
-do_connect()
+# do_connect()

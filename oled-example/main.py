@@ -6,14 +6,23 @@ from time import sleep
 #i2c = I2C(-1, scl=Pin(22), sda=Pin(21))
 
 # ESP8266 Pin assignment
+# SCL=D1 SDA=D2
 i2c = I2C(-1, scl=Pin(5), sda=Pin(4))
 
 oled_width = 128
 oled_height = 64
 oled = ssd1306.SSD1306_I2C(oled_width, oled_height, i2c)
 
-oled.text('Hello, World 1!', 0, 0)
-oled.text('Hello, World 2!', 0, 10)
-oled.text('Hello, World 3!', 0, 20)
-        
-oled.show()
+while True:
+    oled.text('Hello, World 1!', 0, 0)
+    oled.show()
+    sleep(1)
+    oled.text('Hello, World 2!', 0, 10)
+    oled.show()
+    sleep(1)
+    oled.text('Hello, World 3!', 0, 20)
+    oled.show()
+    sleep(1)
+    oled.fill(0)    
+    oled.show()
+    sleep(0.5)
