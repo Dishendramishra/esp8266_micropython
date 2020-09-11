@@ -1,4 +1,4 @@
-# Making Windows 10 Developer Friendly :happy:
+# Making Windows 10 Developer Friendly :blush:
 
 **Installing scoop** 
 
