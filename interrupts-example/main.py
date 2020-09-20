@@ -2,7 +2,7 @@ from machine import Pin
 from time import sleep_ms
 
 led = Pin(16, Pin.OUT)
-button = Pin(0, Pin.IN)
+button = Pin(0, Pin.IN, Pin.PULL_UP)
 
 def func(v):
     led.value(not led.value())
@@ -10,5 +10,4 @@ def func(v):
 button.irq(trigger=Pin.IRQ_FALLING, handler=func)
 
 while True:
-    sleep_ms(500)
     pass
